@@ -4,8 +4,11 @@
   "description": "mern stack project shopping list",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern"
@@ -16,6 +19,7 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
+    "jshint": "^2.9.7",
     "mongoose": "^5.4.5",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
